@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let alarm = () => console.log(`Subaha ho gayi uth jao`);
+    setTimeout(alarm, 5000);
+    console.log('alarm set');
+    
+    // for canceling the timer
+    let timeId = setTimeout(alarm, 1000);
+    console.log(`Alarm set with id: ${timeId}`);
+    clearTimeout(timeId); // Corrected function and variable name
+  </script>
+</body>
+</html>
