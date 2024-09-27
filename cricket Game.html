@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bat, Ball, and Stump</h1>
+
+  <button onclick="playGame('bat')">Bat</button>
+  <button onclick="playGame('ball')">Ball</button>
+  <button onclick="playGame('stump')">Stump</button>
+
+  <script>
+    function playGame(userChoice) {
+      const choices = ['bat', 'ball', 'stump'];
+      const randomNumber = Math.floor(Math.random() * 3);
+      const computerChoice = choices[randomNumber];
+
+      let resultMsg;
+
+      // Determine the game result
+      if (userChoice === 'bat') {
+        if (computerChoice === 'ball') {
+          resultMsg = 'You won!';
+        } else if (computerChoice === 'bat') {
+          resultMsg = 'It\'s a tie!';
+        } else {
+          resultMsg = 'Computer won!';
+        }
+      } else if (userChoice === 'ball') {
+        if (computerChoice === 'stump') {
+          resultMsg = 'You won!';
+        } else if (computerChoice === 'ball') {
+          resultMsg = 'It\'s a tie!';
+        } else {
+          resultMsg = 'Computer won!';
+        }
+      } else if (userChoice === 'stump') {
+        if (computerChoice === 'bat') {
+          resultMsg = 'You won!';
+        } else if (computerChoice === 'stump') {
+          resultMsg = 'It\'s a tie!';
+        } else {
+          resultMsg = 'Computer won!';
+        }
+      }
+
+      // Show the result in an alert
+      alert(`You chose ${userChoice}. Computer chose ${computerChoice}. ${resultMsg}`);
+    }
+  </script>
+</body>
+</html>
