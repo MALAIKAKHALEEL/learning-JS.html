@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <button class="bag-button" onclick="updateCart(1);">Add to Bag</button>
+  <button class="wish-button" onclick="updateCart(-1);">❤️ Wishlist</button>
+  <button class="sale-button" onclick="updateCart(2);">Add 1+1 Sale Item</button>
+  <h1 id="Cart-summary">Your bag has 0 items</h1>
+
+  <script>
+    let cartQuantity = 0;
+
+    function updateCart(amount) {
+      cartQuantity += amount;
+      if (cartQuantity < 0) cartQuantity = 0; // To prevent negative cart quantity
+      document.querySelector('#Cart-summary').innerText = `Your bag has ${cartQuantity} items`;
+    }
+  </script>
+</body>
+</html>
+
