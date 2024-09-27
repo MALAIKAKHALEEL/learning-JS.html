@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    let arr = [3, 5, 7, 9];
+    
+    for (let i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
+    
+    arr.forEach(num => console.log(num));
+
+    // Search function to find an element in the array
+    let arr2 = [5, 3, 7, 9]; 
+    
+    function search(arr, num) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === num) {
+          console.log(`Element found at index: ${i}`);
+          return;
+        }
+      }
+      console.log('Element was not found');
+    }
+
+    
+    search(arr2, 10);
+  </script>
+</body>
+</html>
+>
