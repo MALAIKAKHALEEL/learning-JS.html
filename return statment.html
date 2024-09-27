@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function determineDriveStatus(){
+      let age = 34;
+      let status;
+
+      if(age === undefined){
+        return 'You are a kid';
+      }
+
+      if(age > 18){
+        status = 'You can drive';
+      } else {
+        status = 'You cannot drive';
+      }
+      
+      return status;
+    }
+
+    console.log('Checking drive status');
+    let driveStatus = determineDriveStatus();
+    console.log(driveStatus);
+  </script>
+</body>
+</html>
+
+
